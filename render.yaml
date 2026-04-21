@@ -5,7 +5,8 @@ services:
     env: docker
     plan: free
     dockerContext: backend
-    dockerfilePath: Dockerfile
+    dockerfilePath: backend/Dockerfile
+
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: # You will paste your Neon/Supabase URL here in the Render Dashboard
