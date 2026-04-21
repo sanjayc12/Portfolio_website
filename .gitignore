@@ -1,0 +1,28 @@
+# Java
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/.settings/
+backend/.project
+backend/.classpath
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local uploads
+uploads/
+backend/uploads/
+frontend/public/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
