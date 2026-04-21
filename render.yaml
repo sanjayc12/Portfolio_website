@@ -10,7 +10,7 @@ services:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
           name: portfolio-db
-          property: jdbcString
+          property: connectionString
       - key: SPRING_DATASOURCE_USERNAME
         fromDatabase:
           name: portfolio-db
@@ -36,9 +36,9 @@ services:
           type: web
           name: portfolio-backend
           property: host
-        sync: false
         prefix: https://
         suffix: /api
+
 
 
 
