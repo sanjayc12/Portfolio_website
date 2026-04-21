@@ -8,27 +8,15 @@ services:
     dockerfilePath: Dockerfile
     envVars:
       - key: SPRING_DATASOURCE_URL
-        fromDatabase:
-          name: portfolio-db
-          property: connectionString
-      - key: SPRING_DATASOURCE_USERNAME
-        fromDatabase:
-          name: portfolio-db
-          property: user
-      - key: SPRING_DATASOURCE_PASSWORD
-        fromDatabase:
-          name: portfolio-db
-          property: password
+        value: # You will paste your Neon/Supabase URL here in the Render Dashboard
       - key: SERVER_PORT
         value: 8080
-
 
   # Frontend Service
   - type: web
     name: portfolio-frontend
     env: static
     buildCommand: cd frontend && npm install && npm run build
-
     staticPublishPath: frontend/dist
     envVars:
       - key: VITE_API_BASE_URL
@@ -38,10 +26,3 @@ services:
           property: host
         prefix: https://
         suffix: /api
-
-
-
-
-databases:
-  - name: portfolio-db
-    plan: free
